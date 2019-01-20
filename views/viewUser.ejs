@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+<table>
+  <tr>
+    
+      <th>Title</th>
+      <th>Author</th>
+      <th>Genre</th>
+    
+  </tr>
+  <form>
+      <% for(var i=0;i<array.length;i++) { %>
+        <tr>
+          <form action="/delete" method="POST">
+            <td><input type="text" name="deleteval" value="<%=arrVal[i].title%>"></td>
+            <td><input type="text" value="<%=arrVal[i].author%>"></td>
+            <td><input type="text"  value="<%=arrVal[i].author%>"></td> 
+            <td><input type="submit"   value="delete"></td>
+        </form>
+
+        
+        </tr>
+      <% } %>
+      <td><form action="/updatedata" method="POST">
+        <input type="submit"  value="update">
+    </form></td>
+    </form>
+    </table>
+<form action="/deleteAll" method="POST">
+      <input type="submit"  value="deleteAll">
+  </form>
+  
+  <form action="/" method="GET">
+    <input type="submit" value="Add more books">
+    </form> 
+  </body>
+
+</html>

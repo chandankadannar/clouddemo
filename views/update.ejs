@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <script>
+    function myFunction(x) {
+      var input = document.getElementById('hiddenInput');
+      input.value = x.value;
+    }
+    </script>
+  <body>
+<table>
+  <tr>
+    
+      <th>Title</th>
+      <th>Author</th>
+      <th>Genre</th>
+    
+  </tr>
+  <form>
+      <% for(var i=0;i< array.length ; i++) { %>
+        <tr>
+          <form action="/updated" method="POST">
+            <td><input type="text" id="xy" onfocus="myFunction(this)" name="updateval" value="<%=arrVal[i].title%>"></td>
+            <td><input type="text"  value="<%=arrVal[i].author%>"></td>
+            <td><input type="text"   value="<%=arrVal[i].genre%>"></td> 
+            <td><input type="submit"   value="update"></td>
+            <input type="text" name="chat" id="hiddenInput" value=""/>
+            
+        </form> 
+        
+        </tr>
+      <% } %>
+      
+    </form>
+    </table>
+
+
+</html>
